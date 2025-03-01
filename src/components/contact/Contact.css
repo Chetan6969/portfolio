@@ -1,0 +1,142 @@
+.contact {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact__container {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.contact__info {
+  margin-bottom: 2rem;
+}
+
+.contact__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact__details {
+  color: #666;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact__form-group {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact__form-group {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact__form-div {
+  position: relative;
+}
+
+.contact__form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.contact__form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.contact__form-area .contact__form-input {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.contact__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.contact__button:hover {
+  background-color: #2563eb;
+}
+
+.contact__button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button__loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button__spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .contact__container {
+      background-color: #1f2937;
+  }
+
+  .contact__details {
+      color: #9ca3af;
+  }
+
+  .contact__form-input {
+      background-color: #374151;
+      border-color: #4b5563;
+      color: white;
+  }
+
+  .contact__form-input::placeholder {
+      color: #9ca3af;
+  }
+
+  .contact__form-input:focus {
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+  }
+}
